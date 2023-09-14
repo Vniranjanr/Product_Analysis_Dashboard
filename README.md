@@ -1,6 +1,7 @@
 # Product_Data_Analysis with SQL using PowerBI 
 Please follow the link for a demo: 
 https://github.com/Vniranjanr/Product_Data_Analysis/assets/112669502/8a5bbd04-136a-41c6-8999-35af9e26dc33
+
 I created a compelling Power BI dashboard by leveraging SQL and the AdventureWorks2022 database. The dashboard is created for analyzing various details of product datasets, 
 I used interactive mapviews, slicer, line charts, and tables that presented data in a user-friendly manner.
 
