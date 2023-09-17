@@ -1,11 +1,18 @@
 dash 1
-Select SUM(sd.LineTotal) as 'Total Revenue', (SUM(sd.LineTotal)-SUM(pd.LineTotal)) as 'Profit', 
-((SUM(sd.LineTotal)-SUM(pd.LineTotal))/ SUM(sd.LineTotal))*100 as 'Profit Margin' from [Sales].[SalesOrderDetail] as sd
+Select 
+SUM(sd.LineTotal) as 'Total Revenue', 
+(SUM(sd.LineTotal)-SUM(pd.LineTotal)) as 'Profit', 
+((SUM(sd.LineTotal)-SUM(pd.LineTotal))/ SUM(sd.LineTotal))*100 as 'Profit Margin' 
+from [Sales].[SalesOrderDetail] as sd
 left join [Purchasing].[PurchaseOrderDetail] as pd on
 sd.SalesOrderDetailID=pd.PurchaseOrderDetailID;
 
 dash 2
-Select top 10 pp.Name as 'Product Name',sum(OrderQty) as 'Quantity Sold',SUM(LineTotal) as 'Total Sales' from [Sales].[SalesOrderDetail] so
+Select 
+top 10 pp.Name as 'Product Name',
+sum(OrderQty) as 'Quantity Sold',
+SUM(LineTotal) as 'Total Sales' 
+from [Sales].[SalesOrderDetail] so
 join [Production].[Product] pp on
 so.ProductID=pp.ProductID
 group by so.ProductID,pp.Name
@@ -15,7 +22,10 @@ dash 3
 Select Name as 'Territory',CountryRegionCode as 'Country',SalesYTD from [Sales].SalesTerritory
 
 dash 4
-select count(pp.Name) as 'Number Of Products',pc.Name as 'Category' from Production.Product pp
+select 
+count(pp.Name) as 'Number Of Products',
+pc.Name as 'Category' 
+from Production.Product pp
 join Production.ProductSubcategory psc on
 pp.ProductSubcategoryID=psc.ProductSubcategoryID
 join Production.ProductCategory pc on
@@ -23,8 +33,11 @@ psc.ProductCategoryID=pc.ProductCategoryID
 group by pc.Name
 
 dash 5
-Select COUNT(case OnlineOrderFlag when 0 then 1 else null end) as 'Store Purchases',
-COUNT(case OnlineOrderFlag when 1 then 1 else null end) as 'Online Orders',year(ModifiedDate) as 'Year' from Sales.SalesOrderHeader
+Select 
+COUNT(case OnlineOrderFlag when 0 then 1 else null end) as 'Store Purchases',
+COUNT(case OnlineOrderFlag when 1 then 1 else null end) as 'Online Orders',
+year(ModifiedDate) as 'Year' 
+from Sales.SalesOrderHeader
 group by year(ModifiedDate);
 
 
