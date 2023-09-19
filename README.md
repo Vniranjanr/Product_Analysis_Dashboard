@@ -11,3 +11,9 @@ The following are the visuals inclued in the dashboard:
 3. Used donut chart to show the Number of Products and percentage in each Category
 4. Used table to show sales figures of Top 10 selling Products
 5. Used line chart to show variations in the number of Online and Store purchases over the years
+<HTML>
+  <head>
+<meta name="google-site-verification" content="TPmZXUwxPpTN0rQDXC4VoAnl2DiEHXhbl0eXnL-ttsk" />
+  </head>
+</HTML>
+  
