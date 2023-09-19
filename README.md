@@ -13,7 +13,7 @@ The following are the visuals inclued in the dashboard:
 5. Used line chart to show variations in the number of Online and Store purchases over the years
 <HTML>
   <head>
-    <meta name="google-site-verification" content="TPmZXUwxPpTN0rQDXC4VoAnl2DiEHXhbl0eXnL-ttsk" />
+  <meta name="google-site-verification" content="TPmZXUwxPpTN0rQDXC4VoAnl2DiEHXhbl0eXnL-ttsk" />
   </head>
 </HTML>
   
